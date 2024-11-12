@@ -11,6 +11,8 @@ import BaseCard from './BaseCard.vue'
 
     <!-- 預設 slot 內容 -->
     <p class="card-content">這是卡片的主要內容</p>
+    <p class="card-content">這是卡片的主要內容</p>
+    <p class="card-content">這是卡片的主要內容</p>
     
     <template v-slot:footer>
       <button class="btn">點擊按鈕</button>

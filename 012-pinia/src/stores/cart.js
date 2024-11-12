@@ -27,8 +27,26 @@ export const useCartStore = defineStore('cart', () => {
   function addToCart(product) {
     const existingItem = items.value.find((item) => item.id === product.id)
 
+    // if (existingItem) {
+    //   existingItem.quantity++
+    // } else {
+    //   items.value.push({
+    //     id: product.id,
+    //     name: product.name,
+    //     price: product.price,
+    //     quantity: 1
+    //   })
+    // }
+
+    // // 更新商品庫存
+    // productStore.decreaseInventory(product.id)
+
     if (existingItem) {
-      existingItem.quantity++
+      // 檢查是否超過庫存
+      if (existingItem.quantity < getAvailableStock(product.id)) {
+        existingItem.quantity++
+        productStore.decreaseInventory(product.id)
+      }
     } else {
       items.value.push({
         id: product.id,
@@ -36,10 +54,8 @@ export const useCartStore = defineStore('cart', () => {
         price: product.price,
         quantity: 1
       })
+      productStore.decreaseInventory(product.id)
     }
-
-    // 更新商品庫存
-    productStore.decreaseInventory(product.id)
   }
 
   // 從購物車移除商品
@@ -56,21 +72,55 @@ export const useCartStore = defineStore('cart', () => {
   }
 
   // 更新購物車商品數量
-  function updateQuantity(productId, quantity) {
-    const item = items.value.find((item) => item.id === productId)
-    if (item) {
-      const diff = quantity - item.quantity
-      item.quantity = quantity
+  // function updateQuantity(productId, quantity) {
+  //   const item = items.value.find((item) => item.id === productId)
+  //   if (item) {
+  //     const diff = quantity - item.quantity
+  //     item.quantity = quantity
 
-      // 根據數量變化更新庫存
-      if (diff > 0) {
-        for (let i = 0; i < diff; i++) {
-          productStore.decreaseInventory(productId)
-        }
-      } else {
-        for (let i = 0; i < -diff; i++) {
-          productStore.increaseInventory(productId)
-        }
+  //     // 根據數量變化更新庫存
+  //     if (diff > 0) {
+  //       for (let i = 0; i < diff; i++) {
+  //         productStore.decreaseInventory(productId)
+  //       }
+  //     } else {
+  //       for (let i = 0; i < -diff; i++) {
+  //         productStore.increaseInventory(productId)
+  //       }
+  //     }
+  //   }
+  // }
+
+  // 檢查商品的可用庫存
+  function getAvailableStock(productId) {
+    const product = productStore.products.find((p) => p.id === productId)
+    const cartItem = items.value.find((item) => item.id === productId)
+    const currentQuantity = cartItem ? cartItem.quantity : 0
+    return product ? product.inventory + currentQuantity : 0
+  }
+
+  function updateQuantity(productId, newQuantity) {
+    const item = items.value.find((item) => item.id === productId)
+    if (!item) return
+
+    // 確保數量為正整數
+    newQuantity = Math.max(1, Math.floor(newQuantity))
+
+    // 檢查是否超過可用庫存
+    const availableStock = getAvailableStock(productId)
+    newQuantity = Math.min(newQuantity, availableStock)
+
+    // 計算差異並更新庫存
+    const diff = newQuantity - item.quantity
+    item.quantity = newQuantity
+
+    if (diff > 0) {
+      for (let i = 0; i < diff; i++) {
+        productStore.decreaseInventory(productId)
+      }
+    } else {
+      for (let i = 0; i < -diff; i++) {
+        productStore.increaseInventory(productId)
       }
     }
   }
@@ -93,6 +143,7 @@ export const useCartStore = defineStore('cart', () => {
     addToCart,
     removeFromCart,
     updateQuantity,
-    clearCart
+    clearCart,
+    getAvailableStock
   }
 })

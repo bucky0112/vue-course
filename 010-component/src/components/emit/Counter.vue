@@ -6,6 +6,7 @@ const count = ref(0)
 
 // 處理子元件發送的事件
 const handlePlus = (value) => {
+  console.log(value)
   count.value += value
 }
 </script>

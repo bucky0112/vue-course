@@ -1,6 +1,6 @@
 <script setup>
 // ===== 定義 props 第一種寫法  =====
-// defineProps(['preview', 'title', 'author', 'date'])
+// defineProps(['preview', 'title', 'author', 'date', 'postsData'])
 
 // ===== 定義 props 第二種寫法  =====
 // const props = defineProps(['title', 'preview', 'date', 'author'])

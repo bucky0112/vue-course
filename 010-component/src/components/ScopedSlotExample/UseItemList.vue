@@ -13,7 +13,7 @@ const items = [
     <!-- 自訂每個項目的顯示方式 -->
     <template #default="{ item, index }">
       <div class="item">
-        <span>{{ index + 1 }}.</span>
+        <span>{{ index + 2 }}.</span>
         <strong>{{ item.name }}</strong>
         <p>{{ item.description }}</p>
       </div>

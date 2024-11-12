@@ -50,6 +50,7 @@ onMounted(fetchPosts)
       :preview="post.preview"
       :date="post.date"
       :author="post.author"
-     />
+      :postsData="posts"
+    />
   </div>
 </template>

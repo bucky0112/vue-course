@@ -6,11 +6,11 @@ import ShoppingCart from './components/ShoppingCart.vue'
 
 <template>
   <main>
-    <Counter />
-    <!-- <div class="cart">
+    <!-- <Counter /> -->
+    <div class="cart">
       <ProductList />
       <ShoppingCart />
-    </div> -->
+    </div>
   </main>
 </template>
 

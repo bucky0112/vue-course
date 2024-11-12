@@ -4,7 +4,7 @@ const emit = defineEmits(['numberFromChild'])
 
 // 點擊按鈕時觸發事件
 const handleClick = () => {
-  emit('numberFromChild', 1)  // 發送事件，並傳遞數值 1
+  emit('numberFromChild', 5)  // 發送事件，並傳遞數值 1
 }
 </script>
 

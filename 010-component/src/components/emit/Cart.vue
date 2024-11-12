@@ -7,6 +7,10 @@ const currentQuantity = ref(1)
 
 // 8. 實作處理數量更新的函式
 
+const handleQuantityUpdate = (newQuantity) => {
+  currentQuantity.value = newQuantity
+}
+
 </script>
 
 <template>
@@ -20,8 +24,15 @@ const currentQuantity = ref(1)
         <h3>測試商品</h3>
         <p>單價：$30000</p>
         <!-- 9. 加入 QuantityAdjuster 元件 -->
+        <QuantityAdjuster
+          @update-quantity="handleQuantityUpdate"
+          :initialQty="currentQuantity"
+          :minQty="1"
+          :maxQty="10"
+        />
 
         <!-- 10. 顯示總金額 -->
+        <p>總金額：{{ currentQuantity * 30000 }}</p>
       </div>
     </div>
   </div>
