@@ -14,13 +14,14 @@
   <body>
     <div id="app">
       <!-- 練習 1: 當 isLoggedIn 為 true 時顯示訊息（使用 v-if） -->
-      <p>請在這裡輸入答案：</p>
+      <p v-if="isLoggedIn">你已登入</p>
 
       <!-- 練習 2: 使用 v-show 切換訊息的顯示/隱藏 -->
-      <p>請在這裡輸入答案：</p>
+      <p v-show="isVisible">訊息可以切換</p>
 
       <!-- 練習 3: 根據 userRole 顯示不同的訊息（使用 v-if/else） -->
-      <p>請在這裡輸入答案：</p>
+      <p v-if="userRole === 'admin'">你好，管理者</p>
+      <p v-else>你好，使用者</p>
 
       <button @click="toggleLogin">切換登入狀態</button>
       <button @click="toggleVisibility">切換顯示狀態</button>

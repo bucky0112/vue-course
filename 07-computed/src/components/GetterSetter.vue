@@ -9,6 +9,7 @@
     <div class="result">
       <p>姓：{{ lastName }}</p>
       <p>名：{{ firstName }}</p>
+      <p>{{ fullName }}</p>
     </div>
 
     <!-- 溫度轉換 -->
@@ -53,10 +54,14 @@ export default {
     fullName: {
       // 當讀取 fullName 時調用
       get () {
+        console.log("來自 get")
+        // console.log("來自 get", this.lastName, this.firstName)
         return this.lastName + this.firstName
       },
       // 當設置 fullName 時調用
       set (newValue) {
+        console.log("來自 set", newValue)
+        // console.log("來自 set", 'set fullName', newValue)
         // 假設姓名格式為「姓名」，姓一個字，名可能多個字
         this.lastName = newValue.substring(0, 1)
         this.firstName = newValue.substring(1)

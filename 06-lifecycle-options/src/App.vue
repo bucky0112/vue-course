@@ -1,6 +1,6 @@
 <!-- <script setup>
-// import LifecycleDemo from './components/LifecycleDemo.vue'
-// import SimpleLifecycle from './components/SimpleLifecycle.vue'
+import LifecycleDemo from './components/LifecycleDemo.vue'
+import SimpleLifecycle from './components/SimpleLifecycle.vue'
 </script>
 
 <template>

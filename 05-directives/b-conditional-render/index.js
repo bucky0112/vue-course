@@ -3,7 +3,7 @@ Vue.createApp({
     return {
       isBoxOpen: false,
       isBoxVisible: true,
-      magicPower: 49
+      magicPower: 50
     }
   },
   methods: {

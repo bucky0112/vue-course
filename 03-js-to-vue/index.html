@@ -7,12 +7,13 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="app">
       <h1>點擊數</h1>
-      <span class="count">0</span>
+      <span class="count">{{ count }}</span>
       <button class="clickButton" @click="add">點擊加 1！</button>
+      <button class="clickButton" @click="minus">點擊減 1！</button>
     </div>
-    <script src="index.js"></script>
-    <!-- <script src="main.js"></script> -->
+    <!-- <script src="index.js"></script> -->
+    <script src="main.js"></script>
   </body>
 </html>

@@ -9,13 +9,13 @@
   <body>
     <div id="app">
       <!-- 練習 1: 使用 v-text 顯示 "你好，Vue！" -->
-      <p>請在這裡輸入答案：</p>
+      <p v-text="message">請在這裡輸入答案：</p>
 
       <!-- 練習 2: 使用插值語法顯示 "歡迎來到 {{ courseName }}" -->
-      <p>請在這裡輸入答案：</p>
+      <p>歡迎來到 {{ courseName }}</p>
 
       <!-- 練習 3: 使用 v-html 顯示 HTML 內容 -->
-      <div>請在這裡輸入答案：</div>
+      <div v-html="htmlContent">請在這裡輸入答案：</div>
     </div>
 
     <script>

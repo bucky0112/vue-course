@@ -10,7 +10,7 @@ const greeting = "你好，" + name + "！";
 ### 模板字符串（Template Literals）
 
 ```
-const modernGreeting; <== ✍️
+const modernGreeting = `你好，${name}！`; <== ✍️
 console.log(modernGreeting); // 你好，小明！
 ```
 
@@ -27,7 +27,7 @@ const traditionalSum = function(a, b) {
 ### 箭頭函式 - 更簡潔！
 
 ```
-const modernSum =; <== ✍️
+const modernSum = (a, b) => a + b;
 ```
 
 ### 箭頭函式與陣列方法的組合

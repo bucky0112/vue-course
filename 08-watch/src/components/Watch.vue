@@ -89,6 +89,7 @@ export default {
   watch: {
     // 1. 基本監聽
     basicText (newVal, oldVal) {
+      // console.log('基本監聽：', newVal, oldVal)
       this.basicLogs.unshift(`值改變：${oldVal} -> ${newVal}`)
       if (this.basicLogs.length > 3) this.basicLogs.pop()
     },
@@ -96,6 +97,7 @@ export default {
     // 2. 深度監聽
     user: {
       handler (newVal, oldVal) {
+        // console.log('深度監聽：', newVal, oldVal)
         this.deepLogs.unshift(`使用者資料更新：${JSON.stringify(newVal)}`)
         if (this.deepLogs.length > 3) this.deepLogs.pop()
       },
@@ -105,6 +107,7 @@ export default {
     // 3. 立即監聽
     immediateValue: {
       handler (newVal, oldVal) {
+        console.log('立即監聽：', newVal, oldVal)
         this.immediateLogs.unshift(`數值更新：${oldVal} -> ${newVal}`)
         if (this.immediateLogs.length > 3) this.immediateLogs.pop()
       },
@@ -153,4 +156,4 @@ export default {
   margin: 5px 0;
   color: #666;
 }
-</style>
+</style>// 

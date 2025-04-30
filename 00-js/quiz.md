@@ -4,7 +4,7 @@
 
 ```
 const city = "台北";
-const message = ; // ✍️ 補上模板字符串
+const message = `我現在在${city}！`; // ✍️ 補上模板字符串
 console.log(message); // 我現在在台北！
 ```
 
@@ -19,7 +19,7 @@ const multiply = function(x, y) {
 };
 
 // 請改寫成箭頭函式
-const modernMultiply = ; // ✍️
+const modernMultiply = (x, y) => x * y; // ✍️
 ```
 
 ### 練習二：搭配 map 使用箭頭函式

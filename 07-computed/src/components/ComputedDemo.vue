@@ -39,17 +39,22 @@ export default {
   data () {
     return {
       items: [
-        { name: '商品1', price: 100, quantity: 1 },
-        { name: '商品2', price: 200, quantity: 2 },
-        { name: '商品3', price: 300, quantity: 3 }
+        { name: '商品1', price: 100, quantity: null },
+        { name: '商品2', price: 200, quantity: null },
+        { name: '商品3', price: 300, quantity: null }
       ],
       searchText: ''
     };
   },
   computed: {
     // 計算商品總數
-    totalQuantity () {
-      return this.items.reduce((sum, item) => sum + Number(item.quantity), 0)
+    // totalQuantity () {
+    //   return this.items.reduce((sum, item) => sum + Number(item.quantity), 0)
+    // },
+    totalQuantity: {
+      get () {
+        return this.items.reduce((sum, item) => sum + Number(item.quantity), 0)
+      }
     },
     // 計算總金額
     totalPrice () {

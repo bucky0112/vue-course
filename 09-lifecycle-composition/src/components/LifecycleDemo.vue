@@ -12,18 +12,17 @@ import {
 const message = ref('Hello')
 
 const users = ref([]);
-// onMounted(async () => {
-//   const res = await fetch("https://jsonplaceholder.typicode.com/users");
-//   users.value = await res.json();
-//   console.log(users.value);
-// });
+onMounted(async () => {
+  const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  users.value = await res.json();
+  console.log(users.value);
+});
 
-
-// onBeforeMount(async () => {
-//   const res = await fetch("https://jsonplaceholder.typicode.com/users");
-//   users.value = await res.json();
-//   console.log(users.value);
-// })
+onBeforeMount(async () => {
+  const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  users.value = await res.json();
+  console.log(users.value);
+})
 
 onBeforeMount(() => {
   console.log(message.value, 'onBeforeMount')
