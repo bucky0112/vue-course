@@ -11,6 +11,6 @@ const handleUserSubmit = (userData, emitData) => {
 <template>
   <div>
     <h2>使用者註冊</h2>
-    <FormChild @submit="handleUserSubmit" />
+    <FormChild @submit1="handleUserSubmit" />
   </div>
 </template>

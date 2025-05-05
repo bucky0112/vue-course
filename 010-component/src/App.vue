@@ -8,17 +8,38 @@ import CollapsePanel from './components/practice_slot/CollapsePanel.vue';
 import Counter from './components/emit/Counter.vue';
 import FormParent from './components/emit/FormParent.vue';
 import Cart from './components/emit/Cart.vue';
+
+const firstMessage = {
+  type: "success",
+  title: "成功",
+  content: "資料已成功儲存"
+}
 </script>
 
 <template>
   <main>
-    <BlogList />
+    <!-- <CollapsePanel>
+      <template #title>
+        <h3>第一個範例</h3>
+      </template>
+    </CollapsePanel>
+
+    <CollapsePanel>
+      <template #title></template>
+      <p>xsxx</p>
+    </CollapsePanel>
+
+    <CollapsePanel /> -->
+    <!-- <Message v-bind="firstMessage" />
+    <Message type="warning" title="注意" content="請確認輸入資料是否正確" />
+    <Message type="error" title="錯誤" /> -->
+    <!-- <BlogList /> -->
     <!-- <CardContainer /> -->
     <!-- <UseItemList /> -->
     <!-- <UseLayout /> -->
     <!-- <Counter /> -->
     <!-- <FormParent /> -->
-    <!-- <Cart /> -->
+    <Cart />
   </main>
 </template>
 

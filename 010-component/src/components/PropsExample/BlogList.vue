@@ -18,7 +18,7 @@ const fakePosts = new Promise((resolve) => {
         title: 'Vue 3 新特性介紹',
         preview: 'Vue 3 帶來了許多令人興奮的新特性，包括 Composition API、更好的 TypeScript 支持、更小的打包體積...',
         date: '2024-03-14',
-        author: '小華'
+        author: ''
       },
       {
         id: 3,

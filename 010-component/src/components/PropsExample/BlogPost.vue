@@ -3,7 +3,9 @@
 // defineProps(['preview', 'title', 'author', 'date'])
 
 // ===== 定義 props 第二種寫法  =====
-// const props = defineProps(['title', 'preview', 'date', 'author'])
+// const props1 = defineProps(['title', 'preview', 'date', 'author'])
+
+// console.log(props1)
 
 // ===== 定義 props 第三種寫法  =====
 const props = defineProps({

@@ -6,7 +6,7 @@ import BaseCard from './BaseCard.vue'
   <BaseCard>
     <!-- 使用具名 slot -->
     <template #header>
-      <h2 class="card-title">自訂標題</h2>
+      <h2 class="card-title">自訂標題111</h2>
     </template>
 
     <!-- 預設 slot 內容 -->

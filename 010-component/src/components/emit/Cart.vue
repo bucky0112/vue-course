@@ -4,8 +4,15 @@ import QuantityAdjuster from './QuantityAdjuster.vue'
 import productImage from '../../assets/ps5pro.jpg'
 
 const currentQuantity = ref(1)
+const minQty = ref(1)
+const maxQty = ref(10)
+
+const price = 30000
 
 // 8. 實作處理數量更新的函式
+const handleQuantityUpdate = (qty) => {
+  currentQuantity.value = qty
+}
 
 </script>
 
@@ -20,8 +27,15 @@ const currentQuantity = ref(1)
         <h3>測試商品</h3>
         <p>單價：$30000</p>
         <!-- 9. 加入 QuantityAdjuster 元件 -->
+        <QuantityAdjuster
+          :initial-qty="currentQuantity"
+          :min-qty="minQty"
+          :max-qty="maxQty"
+          @update-quantity="handleQuantityUpdate"
+        />
 
         <!-- 10. 顯示總金額 -->
+        <p>總金額：{{ currentQuantity * price }}</p>
       </div>
     </div>
   </div>
