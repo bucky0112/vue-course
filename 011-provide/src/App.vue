@@ -52,14 +52,14 @@ provide('currentLang', currentLang)
 </script>
 
 <template>
-  <!-- <AComponent /> -->
-  <div :class="theme">
+  <AComponent />
+  <!-- <div :class="theme">
     <ThemeSwitch />
     <Content />
     <LanguageSwitch />
     <Navigation />
     <WelcomeMessage />
-  </div>
+  </div> -->
 </template>
 
 <style scoped>

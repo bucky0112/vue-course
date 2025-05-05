@@ -2,16 +2,22 @@
 import { ref } from 'vue'
 import QuantityAdjuster from './QuantityAdjuster.vue'
 import productImage from '../../assets/ps5pro.jpg'
+import FavoriteButton from './FavoriteButton.vue'
 
 const currentQuantity = ref(1)
 const minQty = ref(1)
 const maxQty = ref(10)
+const isFavorite = ref(false)
 
 const price = 30000
 
 // 8. 實作處理數量更新的函式
 const handleQuantityUpdate = (qty) => {
   currentQuantity.value = qty
+}
+
+const handleToggleFavorite = () => {
+  isFavorite.value = !isFavorite.value
 }
 
 </script>
@@ -24,7 +30,13 @@ const handleQuantityUpdate = (qty) => {
         <img :src="productImage" alt="商品圖片">
       </div>
       <div class="product-info">
-        <h3>測試商品</h3>
+        <div>
+          <h3>測試商品</h3>
+          <FavoriteButton
+            :is-favorite="isFavorite"
+            @toggle-favorite="handleToggleFavorite"
+          />
+        </div>
         <p>單價：$30000</p>
         <!-- 9. 加入 QuantityAdjuster 元件 -->
         <QuantityAdjuster
