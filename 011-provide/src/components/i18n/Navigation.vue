@@ -1,12 +1,16 @@
 <script setup>
 import { inject } from 'vue'
+
+const locale = inject('locale')
+
+console.log(locale)
 </script>
 
 <template>
   <nav>
-    <a href="#">首頁</a>
-    <a href="#">關於我們</a>
-    <a href="#">聯絡我們</a>
+    <a href="#">{{ locale.nav.home }}</a>
+    <a href="#">{{ locale.nav.about }}</a>
+    <a href="#">{{ locale.nav.contact }}</a>
   </nav>
 </template>
 

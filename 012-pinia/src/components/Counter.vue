@@ -4,6 +4,7 @@ import { useCounterStore } from '@/stores/counter'
 
 const store = useCounterStore()
 // ⭕️ 正確用法
+// const { count, doubleCount } = store
 const { count, doubleCount } = storeToRefs(store)
 const { increment } = store
 </script>

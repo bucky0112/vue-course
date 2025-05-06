@@ -26,7 +26,13 @@ const theme = ref('light')
 
 provide('theme', theme)
 provide('toggleTheme', () => {
-  theme.value = theme.value === 'light' ? 'dark' : 'light'
+  // theme.value = theme.value === 'light' ? 'dark' : 'light'
+
+  if (theme.value === 'light') {
+    theme.value = 'dark'
+  } else {
+    theme.value = 'light'
+  }
 })
 
 // === 語言切換 ===
@@ -45,6 +51,7 @@ provide('locale', computed(() => locales[currentLang.value]))
 // 提供切換語言方法
 provide('toggleLanguage', () => {
   currentLang.value = currentLang.value === 'zh' ? 'en' : 'zh'
+  console.log(currentLang.value)
 })
 
 // 提供目前語言
@@ -52,14 +59,14 @@ provide('currentLang', currentLang)
 </script>
 
 <template>
-  <AComponent />
-  <!-- <div :class="theme">
+  <!-- <AComponent /> -->
+  <div :class="theme">
     <ThemeSwitch />
     <Content />
     <LanguageSwitch />
     <Navigation />
     <WelcomeMessage />
-  </div> -->
+  </div>
 </template>
 
 <style scoped>

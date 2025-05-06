@@ -1,5 +1,6 @@
 <script setup>
 defineProps(['isFavorite'])
+withDefaultProps
 
 const emit = defineEmits(['toggle-favorite'])
 </script>
