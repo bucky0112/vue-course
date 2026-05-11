@@ -14,5 +14,8 @@ dist-ssr
 coverage
 *.local
 
+# Claude Code 本地設定
+.claude/
+
 /00-js/*answer.md
 /05-directives/test/*answer.html
