@@ -2,51 +2,19 @@
 
 這是一個漸進式的 Vue.js 教學專案，從基礎 JavaScript 到 Vue.js 的各個重要概念都有涵蓋。
 
-## 課程結構
+## 課程大綱
 
-本課程按照以下順序漸進式學習：
+完整課程大綱請見 [SYLLABUS.md](./SYLLABUS.md)，內含 21 個章節的學習目標、內容、與設計理念。
 
-1. **基礎 JavaScript (00-js)**
-   - JavaScript 基礎概念
+簡要學習路徑：
 
-2. **關注點分離 (01-SOC)**
-   - 學習程式碼組織和關注點分離的概念
-
-3. **CDN 方式建立 Vue 應用 (02-creating-app-cdn)**
-   - 使用 CDN 方式快速開始 Vue 開發
-
-4. **從 JS 到 Vue 的轉換 (03-js-to-vue)**
-   - 理解如何將普通 JavaScript 程式轉換為 Vue 應用
-
-5. **Vue 指令 (05-directives)**
-   - 文字渲染 (v-text, v-html)
-   - 條件渲染 (v-if, v-show)
-   - 列表渲染 (v-for)
-   - 事件處理 (v-on, @)
-   - 表單綁定 (v-model)
-   - 屬性綁定 (v-bind, :)
-
-6. **生命週期 (06-lifecycle-options, 09-lifecycle-composition)**
-   - Options API 生命週期
-   - Composition API 生命週期
-
-7. **計算屬性 (07-computed)**
-   - 學習使用計算屬性最佳化程式碼
-
-8. **監聽器 (08-watch)**
-   - 使用 watch 監聽數據變化
-
-9. **元件化開發 (010-component)**
-   - Props 傳遞
-   - 事件發送 (Emit)
-   - 插槽使用 (Slots)
-
-10. **依賴注入 (011-provide)**
-   - Provide/Inject 使用
-   - 多語系範例實作
-
-11. **狀態管理 (012-pinia)**
-    - Pinia 狀態管理工具的使用
+1. **基礎準備** (`00-js` → `04-cli`)：JavaScript 基礎、關注點分離、Vue CDN 體驗、CLI/Vite 工程化
+2. **模板與響應性** (`05-directives` → `09-lifecycle`)：指令、Composition API 基礎、Computed、Watch、生命週期
+3. **元件系統** (`10-template-refs` → `13-advanced-components`)：Template Refs、元件基礎、`defineModel`、Teleport/Suspense/KeepAlive
+4. **可重用邏輯** (`14-composables` → `15-vueuse`)：自訂 Composables、VueUse 生態系
+5. **跨元件溝通與資料** (`16-provide` → `17-api`)：Provide/Inject、API 串接 pattern
+6. **應用層** (`18-pinia` → `19-router`)：Pinia 狀態管理、Vue Router 路由
+7. **上線與下一步** (`20-deploy` → `21-bridge`)：部署、TypeScript / Nuxt 橋接介紹
 
 ## 環境設定
 
@@ -72,9 +40,9 @@ npm run build
    - 建議按照資料夾編號順序學習
    - 每個概念都建立在前面的基礎之上
 
-2. **兩種 API 風格**：
-   - 專案同時展示了 Options API 和 Composition API 的使用方式
-   - 可以比較兩種風格的差異和適用場景
+2. **API 風格**：
+   - 主軸採用 Composition API + `<script setup>`，與 Vue 3 官方推薦及業界主流一致
+   - Options API 僅在第 9 章附錄以對照表形式介紹，目的是讓你能讀懂舊專案
 
 3. **練習建議**：
    - 每個主題都包含了實作範例
