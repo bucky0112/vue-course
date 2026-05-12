@@ -1,0 +1,169 @@
+:root {
+  --bg: #fafafa;
+  --fg: #222;
+  --muted: #777;
+  --accent: #42b983;
+  --border: #e3e3e3;
+  --danger: #d33;
+  --card-bg: #fff;
+  --card-bg-2: #fbfbfb;
+  --pre-bg: #f4f4f4;
+  --pre-fg: #333;
+  --button-bg: #ffffff;
+  --button-hover: #f0f0f0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC",
+    "Microsoft JhengHei", sans-serif;
+  line-height: 1.6;
+}
+
+/* useDark 會在 <html> 加上 .dark class — 整個頁面切換為深色 */
+html.dark {
+  --bg: #181818;
+  --fg: #eaeaea;
+  --muted: #8c8c8c;
+  --border: #3a3a3a;
+  --card-bg: #232323;
+  --card-bg-2: #2a2a2a;
+  --pre-bg: #1c1c1c;
+  --pre-fg: #d4d4d4;
+  --button-bg: #2e2e2e;
+  --button-hover: #3a3a3a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+  background: var(--bg);
+  color: var(--fg);
+  transition: background 200ms ease, color 200ms ease;
+}
+
+#app {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+section {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+}
+
+section > h2 {
+  margin-top: 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 280px;
+  background: var(--card-bg-2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+
+.card h3,
+.card h4 {
+  margin-top: 0;
+}
+
+.value {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 8px 0;
+}
+
+button {
+  padding: 6px 12px;
+  margin-right: 6px;
+  border: 1px solid var(--border);
+  background: var(--button-bg);
+  color: var(--fg);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background: var(--button-hover);
+}
+
+input[type="text"],
+input:not([type]) {
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--fg);
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+input[type="number"] {
+  width: 80px;
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--fg);
+  border-radius: 4px;
+}
+
+label {
+  display: inline-block;
+  margin: 4px 8px 4px 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 6px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hint {
+  color: var(--muted);
+  font-size: 13px;
+  font-style: italic;
+}
+
+.error {
+  color: var(--danger);
+}
+
+pre {
+  background: var(--pre-bg);
+  color: var(--pre-fg);
+  padding: 12px;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-size: 13px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 16px 0;
+}
