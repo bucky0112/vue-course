@@ -16,30 +16,34 @@
 
 ## 課程地圖
 
-| # | 章節 | 主題 | 來源 |
-|---|------|------|------|
-| 00 | JS 基礎 | JavaScript 基本概念 | 既有 |
-| 01 | 關注點分離 (SoC) | HTML / CSS / JS 拆分 | 既有 |
-| 02 | CDN 建立 Vue App | 用 CDN 快速體驗 Vue | 既有 |
-| 03 | 從 JS 到 Vue | 同一段邏輯的兩種寫法對照 | 既有 |
-| 04 | CLI / Vite 專案 | `create-vue` + Vite 進階設定 + ESLint/Prettier + Vue DevTools | **擴充** |
-| 05 | Directives | `v-text` / `v-html` / `v-if` / `v-show` / `v-for` / `v-on` / `v-model` / `v-bind` | 既有 |
-| 06 | Composition API 基礎 | `<script setup>` / `ref` vs `reactive` / 解構陷阱 / `toRefs` | **新增（取代原 Options 生命週期章）** |
-| 07 | Computed | 計算屬性、getter/setter | 既有 |
-| 08 | Watch & WatchEffect | `watch` vs `watchEffect` 差異與選用 | **擴充** |
-| 09 | 生命週期 | `onMounted` 等 Composition 生命週期 + Options API 對照附錄 | **整併** |
-| 10 | Template Refs | `useTemplateRef`（Vue 3.5）取 DOM / 子元件 | **新增** |
-| 11 | 元件基礎 | Props / Emit / Slots / Scoped Slots | 既有 |
-| 12 | defineModel | Vue 3.4 標準 v-model 寫法 | **新增** |
-| 13 | 元件進階 | `<Teleport>` / `<Suspense>` + 異步元件 / `<KeepAlive>` | **新增** |
-| 14 | Composables（重點章） | 自訂 `useXxx` 組合式函式 | **新增** |
-| 15 | VueUse 實戰 | 業界常用 utility 庫 | **新增** |
-| 16 | Provide / Inject | 跨層級依賴注入、i18n 範例 | 既有 |
-| 17 | API 串接 | fetch / axios + loading / error / data 三態 | **新增** |
-| 18 | Pinia | state / getters / actions + action 呼叫 API + 持久化 plugin | **擴充** |
-| 19 | Vue Router | 基本路由 + Navigation Guards + Lazy Loading + meta + 動態路由 | **擴充** |
-| 20 | 部署 | Vercel / Netlify / Cloudflare Pages（擇一示範） | **新增** |
-| 21 | 進階主題橋接 | TypeScript with Vue 簡介 + Nuxt 3 簡介 | **新增** |
+> ✅ = 已完成　⏳ = 待做　— = 既有章節未動
+
+| # | 章節 | 主題 | 來源 | 狀態 |
+|---|------|------|------|------|
+| 00 | JS 基礎 | JavaScript 基本概念 | 既有 | — |
+| 01 | 關注點分離 (SoC) | HTML / CSS / JS 拆分 | 既有 | — |
+| 02 | CDN 建立 Vue App | 用 CDN 快速體驗 Vue | 既有 | — |
+| 03 | 從 JS 到 Vue | 同一段邏輯的兩種寫法對照 | 既有 | — |
+| 04 | CLI / Vite 專案 | `create-vue` + Vite 進階設定 + ESLint/Prettier + Vue DevTools | **擴充** | ⏳ |
+| 05 | Directives | `v-text` / `v-html` / `v-if` / `v-show` / `v-for` / `v-on` / `v-model` / `v-bind` | 既有 | — |
+| 06 | Composition API 基礎 | `<script setup>` / `ref` vs `reactive` / 解構陷阱 / `toRefs` | **新增（取代原 Options 生命週期章）** | ✅ |
+| 07 | Computed | 計算屬性、getter/setter | 既有 | — |
+| 08 | Watch & WatchEffect | `watch` vs `watchEffect` 差異與選用 | **擴充** | ✅ |
+| 09 | 生命週期 | `onMounted` 等 Composition 生命週期 + Options API 對照附錄 | **整併** | ✅ |
+| 10 | Template Refs | `useTemplateRef`（Vue 3.5）取 DOM / 子元件 | **新增** | ✅ |
+| 11 | 元件基礎 | Props / Emit / Slots / Scoped Slots | 既有 | — |
+| 12 | defineModel | Vue 3.4 標準 v-model 寫法 | **新增** | ✅ |
+| 13 | 元件進階 | `<Teleport>` / `<Suspense>` + 異步元件 / `<KeepAlive>` | **新增** | ✅ |
+| 14 | Composables（重點章） | 自訂 `useXxx` 組合式函式 | **新增** | ✅ |
+| 15 | VueUse 實戰 | 業界常用 utility 庫 | **新增** | ✅ |
+| 16 | Provide / Inject | 跨層級依賴注入、i18n 範例 | 既有 | — |
+| 17 | API 串接 | fetch / axios + loading / error / data 三態 | **新增** | ✅ |
+| 18 | Pinia | state / getters / actions + action 呼叫 API + 持久化 plugin | **擴充** | ⏳ |
+| 19 | Vue Router | 基本路由 + Navigation Guards + Lazy Loading + meta + 動態路由 | **擴充** | ✅ |
+| 20 | 部署 | Vercel / Netlify / Cloudflare Pages（擇一示範） | **新增** | ⏳ |
+| 21 | 進階主題橋接 | TypeScript with Vue 簡介 + Nuxt 3 簡介 | **新增** | ⏳ |
+
+**目前進度**：10 / 14 個需動章節已完成（71%）。
 
 ---
 
@@ -204,3 +208,32 @@
 - **新增 9 個獨立章節**：Composition API 基礎、Template Refs、defineModel、元件進階、Composables、VueUse、API 串接、部署、進階主題橋接。
 - **擴充 4 個既有章節**：04 CLI、08 Watch、18 Pinia、19 Vue Router。
 - **章節順序重整**：把所有 Composition API 基礎（06–10）排在元件章節（11–14）之前，建立統一心智模型。
+
+---
+
+## Progress Log
+
+每個章節對應的 commit；想找某章的程式碼時可直接查這個 commit。
+
+| 章節 | 動作 | Commit | 資料夾 |
+|------|------|--------|--------|
+| 大綱 | 建立 SYLLABUS.md、README 改指向 | `c6c3802` | `SYLLABUS.md` |
+| #14 | 新增 Composables（重點章） | `266979d` | `014-composables/` |
+| #06 | 新增 Composition API 基礎 | `61d6345` | `06-composition-basics/` |
+| #10 | 新增 Template Refs | `bc81e2a` | `10-template-refs/` |
+| #12 | 新增 defineModel | `c8725ea` | `12-define-model/` |
+| #13 | 新增 元件進階 | `556b9e3` | `13-advanced-components/` |
+| #15 | 新增 VueUse 實戰 | `25827f4` | `15-vueuse/` |
+| #17 | 新增 API 串接 | `82162f5` | `17-api/` |
+| #08 | 重寫 Watch + WatchEffect | `12653d9` | `08-watch/` |
+| #09 | 整併生命週期 + Options 附錄、退役 `06-lifecycle-options/` | `e25dd40` | `09-lifecycle-composition/` |
+| #19 | 擴充 Vue Router（guards / meta / 404） | `bbc8876` | `013-vue-router/` |
+
+### 待完成
+
+| 章節 | 動作 | 預計優先序 |
+|------|------|-----------|
+| #18 | 擴充 Pinia（action 呼叫 API、持久化 plugin） | 高 |
+| #20 | 新增 部署（Vercel demo + SPA fallback） | 中 |
+| #04 | 擴充 CLI（Vite 進階 + ESLint + DevTools） | 中 |
+| #21 | 新增 TS / Nuxt 橋接 | 中 |
