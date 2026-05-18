@@ -24,7 +24,7 @@
 | 01 | 關注點分離 (SoC) | HTML / CSS / JS 拆分 | 既有 | — |
 | 02 | CDN 建立 Vue App | 用 CDN 快速體驗 Vue | 既有 | — |
 | 03 | 從 JS 到 Vue | 同一段邏輯的兩種寫法對照 | 既有 | — |
-| 04 | CLI / Vite 專案 | `create-vue` + Vite 進階設定 + ESLint/Prettier + Vue DevTools | **擴充** | ⏳ |
+| 04 | CLI / Vite 專案 | `create-vue` + Vite 主要設定（alias / env / proxy） | **擴充** | ✅ |
 | 05 | Directives | `v-text` / `v-html` / `v-if` / `v-show` / `v-for` / `v-on` / `v-model` / `v-bind` | 既有 | — |
 | 06 | Composition API 基礎 | `<script setup>` / `ref` vs `reactive` / 解構陷阱 / `toRefs` | **新增（取代原 Options 生命週期章）** | ✅ |
 | 07 | Computed | 計算屬性、getter/setter | 既有 | — |
@@ -43,7 +43,7 @@
 | 20 | 部署 | Vercel / Netlify / Cloudflare Pages（擇一示範） | **新增** | ⏳ |
 | 21 | 進階主題橋接 | TypeScript with Vue 簡介 + Nuxt 3 簡介 | **新增** | ⏳ |
 
-**目前進度**：10 / 14 個需動章節已完成（71%）。
+**目前進度**：11 / 14 個需動章節已完成（79%）。
 
 ---
 
@@ -65,12 +65,14 @@
 - **內容**：點數計數器、清單渲染兩種寫法對照。
 
 ### 04 — CLI / Vite 專案 ⭐擴充
-- **目標**：建立可長期維護的工程化基礎。
+- **目標**：建立可長期維護的工程化基礎，看懂 `vite.config.js`。
 - **內容**：
-  - `npm create vue@latest` 互動式建立專案
-  - Vite 設定深入：`vite.config.js`、`@` alias、`import.meta.env`、`server.proxy`
-  - ESLint + Prettier 整合（避免衝突）
-  - Vue DevTools 安裝與基本面板介紹
+  - `npm create vue@latest` 互動式 wizard，逐題說明
+  - `vite.config.js` 結構與啟動流程
+  - `@` alias（`vite.config.js` + `jsconfig.json` 雙設定）
+  - `.env` 系列檔案層級（dev / prod / local）與 `import.meta.env`
+  - `server.proxy` 開發時繞 CORS（含 `^` anchor、`changeOrigin` 等細節）
+- **不在範圍**：ESLint + Prettier 跟 Vue DevTools 由 wizard 預設加入，課堂上各提一句即可，不展開細節。
 
 ### 05 — Directives
 - **目標**：模板語法完整掌握。
@@ -228,6 +230,7 @@
 | #08 | 重寫 Watch + WatchEffect | `12653d9` | `08-watch/` |
 | #09 | 整併生命週期 + Options 附錄、退役 `06-lifecycle-options/` | `e25dd40` | `09-lifecycle-composition/` |
 | #19 | 擴充 Vue Router（guards / meta / 404） | `bbc8876` | `19-router/` |
+| #04 | 擴充 CLI（Vite 設定 + alias / env / proxy 對照範本） | _本次_ | `04-cli/` |
 
 ### 待完成
 
@@ -235,5 +238,4 @@
 |------|------|-----------|
 | #18 | 擴充 Pinia（action 呼叫 API、持久化 plugin） | 高 |
 | #20 | 新增 部署（Vercel demo + SPA fallback） | 中 |
-| #04 | 擴充 CLI（Vite 進階 + ESLint + DevTools） | 中 |
 | #21 | 新增 TS / Nuxt 橋接 | 中 |
