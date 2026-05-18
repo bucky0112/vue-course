@@ -38,12 +38,12 @@
 | 15 | VueUse 實戰 | 業界常用 utility 庫 | **新增** | ✅ |
 | 16 | Provide / Inject | 跨層級依賴注入、i18n 範例 | 既有 | — |
 | 17 | API 串接 | fetch / axios + loading / error / data 三態 | **新增** | ✅ |
-| 18 | Pinia | state / getters / actions + action 呼叫 API + 持久化 plugin | **擴充** | ⏳ |
+| 18 | Pinia | state / getters / actions + setup vs options + action 呼叫 API + 持久化 plugin | **擴充** | ✅ |
 | 19 | Vue Router | 基本路由 + Navigation Guards + Lazy Loading + meta + 動態路由 | **擴充** | ✅ |
 | 20 | 部署 | Vercel / Netlify / Cloudflare Pages（擇一示範） | **新增** | ⏳ |
 | 21 | 進階主題橋接 | TypeScript with Vue 簡介 + Nuxt 3 簡介 | **新增** | ⏳ |
 
-**目前進度**：11 / 14 個需動章節已完成（79%）。
+**目前進度**：12 / 14 個需動章節已完成（86%）。
 
 ---
 
@@ -231,11 +231,11 @@
 | #09 | 整併生命週期 + Options 附錄、退役 `06-lifecycle-options/` | `e25dd40` | `09-lifecycle-composition/` |
 | #19 | 擴充 Vue Router（guards / meta / 404） | `bbc8876` | `19-router/` |
 | #04 | 擴充 CLI（Vite 設定 + alias / env / proxy 對照範本） | _本次_ | `04-cli/` |
+| #18 | 擴充 Pinia（README 補完 + options 對照 + API store + persistedstate） | _本次_ | `18-pinia/` |
 
 ### 待完成
 
 | 章節 | 動作 | 預計優先序 |
 |------|------|-----------|
-| #18 | 擴充 Pinia（action 呼叫 API、持久化 plugin） | 高 |
 | #20 | 新增 部署（Vercel demo + SPA fallback） | 中 |
 | #21 | 新增 TS / Nuxt 橋接 | 中 |
