@@ -218,7 +218,7 @@
 | 章節 | 動作 | Commit | 資料夾 |
 |------|------|--------|--------|
 | 大綱 | 建立 SYLLABUS.md、README 改指向 | `c6c3802` | `SYLLABUS.md` |
-| #14 | 新增 Composables（重點章） | `266979d` | `014-composables/` |
+| #14 | 新增 Composables（重點章） | `266979d` | `14-composables/` |
 | #06 | 新增 Composition API 基礎 | `61d6345` | `06-composition-basics/` |
 | #10 | 新增 Template Refs | `bc81e2a` | `10-template-refs/` |
 | #12 | 新增 defineModel | `c8725ea` | `12-define-model/` |
@@ -227,7 +227,7 @@
 | #17 | 新增 API 串接 | `82162f5` | `17-api/` |
 | #08 | 重寫 Watch + WatchEffect | `12653d9` | `08-watch/` |
 | #09 | 整併生命週期 + Options 附錄、退役 `06-lifecycle-options/` | `e25dd40` | `09-lifecycle-composition/` |
-| #19 | 擴充 Vue Router（guards / meta / 404） | `bbc8876` | `013-vue-router/` |
+| #19 | 擴充 Vue Router（guards / meta / 404） | `bbc8876` | `19-router/` |
 
 ### 待完成
 
