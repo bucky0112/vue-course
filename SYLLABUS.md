@@ -40,10 +40,10 @@
 | 17 | API 串接 | fetch / axios + loading / error / data 三態 | **新增** | ✅ |
 | 18 | Pinia | state / getters / actions + setup vs options + action 呼叫 API + 持久化 plugin | **擴充** | ✅ |
 | 19 | Vue Router | 基本路由 + Navigation Guards + Lazy Loading + meta + 動態路由 | **擴充** | ✅ |
-| 20 | 部署 | Vercel / Netlify / Cloudflare Pages（擇一示範） | **新增** | ⏳ |
+| 20 | 部署 | Vercel 部署示範 + 環境變數 + SPA fallback | **新增** | ✅ |
 | 21 | 進階主題橋接 | TypeScript with Vue 簡介 + Nuxt 3 簡介 | **新增** | ⏳ |
 
-**目前進度**：12 / 14 個需動章節已完成（86%）。
+**目前進度**：13 / 14 個需動章節已完成（93%）。
 
 ---
 
@@ -232,10 +232,10 @@
 | #19 | 擴充 Vue Router（guards / meta / 404） | `bbc8876` | `19-router/` |
 | #04 | 擴充 CLI（Vite 設定 + alias / env / proxy 對照範本） | _本次_ | `04-cli/` |
 | #18 | 擴充 Pinia（README 補完 + options 對照 + API store + persistedstate） | _本次_ | `18-pinia/` |
+| #20 | 新增 部署（Vercel demo + vercel.json rewrites + env vars） | _本次_ | `20-deploy/` |
 
 ### 待完成
 
 | 章節 | 動作 | 預計優先序 |
 |------|------|-----------|
-| #20 | 新增 部署（Vercel demo + SPA fallback） | 中 |
 | #21 | 新增 TS / Nuxt 橋接 | 中 |
